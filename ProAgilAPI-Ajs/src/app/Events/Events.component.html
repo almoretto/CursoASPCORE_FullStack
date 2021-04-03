@@ -1,12 +1,60 @@
 
- <h4>Events works!</h4>
-<br><br>
-<div *ngFor="let item of events">
-
-<h5>{{item.subject}}</h5>
-<br>
-{{item.local}}
-<br>
-{{item.eventDate}}
-<br><br>
+<div class="form-inline">
+    <div class="formgrou mb-2">
+        <input type="text" 
+        class="form-control mr-2" 
+        placeholder="Search"
+        [(ngModel)]="filterType">
+        <button class="btn btn-outline-dark">Buscar</button>
+    </div>
 </div>
+<h6>Filtro: {{filterType}}</h6>
+<table class="table table-stripped">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                <button class="btn-sm btn-light btn" (click)="ImgAlternate()">
+                    AltView Img
+                </button>
+            </th>
+            <th>#</th>
+            <th>Assunto</th>
+            <th>Local</th>
+            <th>Data</th>
+            <th>Lote</th>
+            <th>Qte de pessoas</th>
+            <th>Opções</th>
+        </tr>
+    </thead>
+    <tbody *ngIf="events && events.length">
+        <tr *ngFor="let item of events">
+            <td>
+                <img  *ngIf="showImg"
+                src="http://localhost:8080/imgs/{{item.imageURL}}" 
+                alt="{{item.subject}}"
+                [style.width.px]="imgWidth"
+                [style.margin.px]="imgMargin"
+                >
+            </td>
+            <td>{{item.idEvent}}</td>
+            <td>{{item.subject}}</td>
+            <td>{{item.local}}</td>
+            <td>{{item.eventDate}}</td>
+            <td>{{item.lot}}</td>
+            <td>{{item.guestsQty}}</td>
+            <td>
+                <button class="btn-lg btn-success"></button>
+                <button class="btn-lg btn-danger"></button>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot *ngIf="!events.length">
+        <tr>
+            <td colspan="7" classe="text-center">
+                <h5 class="text-center">
+                    Nenhum registro encontrado!
+                </h5>
+            </td>
+        </tr>
+    </tfoot>
+</table>

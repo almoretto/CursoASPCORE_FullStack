@@ -1,26 +1,15 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-
-
-
+<div class="full-width">
+  <app-NavBar></app-NavBar>
+</div>
 
 <div class="container text-center">
+  <h1><span>{{ title }} app is running!</span></h1>
+  <br><br>
+</div>
 
-
-    <h1><span>{{ title }} app is running!</span></h1>
-
-  </div>
-
-  <!-- Resources -->
-  <div class="container text-center">
-    <app-Events></app-Events>
-  </div>
+<!-- Resources -->
+<div class="container">
+  <app-Events></app-Events>
+</div>
  
 <router-outlet></router-outlet>

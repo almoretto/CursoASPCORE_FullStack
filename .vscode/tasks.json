@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/ProAgilAPI/ProAgilAPI/ProAgilAPI.csproj",
+                "${workspaceFolder}/ProAgilWebApi/ProAgilWebApi.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/ProAgilAPI/ProAgilAPI/ProAgilAPI.csproj",
+                "${workspaceFolder}/ProAgilWebApi/ProAgilWebApi.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -32,7 +32,7 @@
             "args": [
                 "watch",
                 "run",
-                "${workspaceFolder}/ProAgilAPI/ProAgilAPI/ProAgilAPI.csproj",
+                "${workspaceFolder}/ProAgilWebApi/ProAgilWebApi.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
