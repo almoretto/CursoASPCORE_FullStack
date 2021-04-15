@@ -4,11 +4,11 @@
         <input type="text" 
         class="form-control mr-2" 
         placeholder="Search"
-        [(ngModel)]="filterType">
+        [(ngModel)]="filterList">
         <button class="btn btn-outline-dark">Buscar</button>
     </div>
 </div>
-<h6>Filtro: {{filterType}}</h6>
+<h6><label class="mr-2">Filtro:</label> {{filterList}}</h6>
 <table class="table table-stripped">
     <thead class="thead-dark">
         <tr>
@@ -27,7 +27,7 @@
         </tr>
     </thead>
     <tbody *ngIf="events && events.length">
-        <tr *ngFor="let item of events">
+        <tr *ngFor="let item of filteredEvents">
             <td>
                 <img  *ngIf="showImg"
                 src="http://localhost:8080/imgs/{{item.imageURL}}" 
@@ -40,7 +40,7 @@
             <td>{{item.subject}}</td>
             <td>{{item.local}}</td>
             <td>{{item.eventDate}}</td>
-            <td>{{item.lot}}</td>
+            <td>{{item.lot | uppercase}}</td>
             <td>{{item.guestsQty}}</td>
             <td>
                 <button class="btn-lg btn-success"></button>

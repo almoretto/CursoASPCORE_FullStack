@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Repository\\CursoASPCORE_FullStack\\ProAgilWebApi\\ProAgilWebApi.csproj": {}
+    "D:\\Repository\\CursoASPCORE_FullStack\\ProAgilWebApi\\ProAgilWebApi.csproj": {}
   },
   "projects": {
-    "d:\\Repository\\CursoASPCORE_FullStack\\ProAgilWebApi\\ProAgilWebApi.csproj": {
+    "D:\\Repository\\CursoASPCORE_FullStack\\ProAgilWebApi\\ProAgilWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Repository\\CursoASPCORE_FullStack\\ProAgilWebApi\\ProAgilWebApi.csproj",
+        "projectUniqueName": "D:\\Repository\\CursoASPCORE_FullStack\\ProAgilWebApi\\ProAgilWebApi.csproj",
         "projectName": "ProAgilWebApi",
-        "projectPath": "d:\\Repository\\CursoASPCORE_FullStack\\ProAgilWebApi\\ProAgilWebApi.csproj",
+        "projectPath": "D:\\Repository\\CursoASPCORE_FullStack\\ProAgilWebApi\\ProAgilWebApi.csproj",
         "packagesPath": "C:\\Users\\amore\\.nuget\\packages\\",
-        "outputPath": "d:\\Repository\\CursoASPCORE_FullStack\\ProAgilWebApi\\obj\\",
+        "outputPath": "D:\\Repository\\CursoASPCORE_FullStack\\ProAgilWebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

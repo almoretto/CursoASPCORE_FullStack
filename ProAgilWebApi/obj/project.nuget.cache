@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FmG7oCYMIrkkVqvN8OACxMwsLV5qdEBkUomKTiFcG6RDWNZUndJ3xaOkVMy9Lw/i4fhI1zCEhs6CTK0nqlAfkg==",
+  "dgSpecHash": "n2PtbE9IfRtL18BtNhP+KPkfhjdcAiS6GizfVYL/BayfXmF/S6dR9UFnmn1RlcCdeNMnZjARVfeh0j+YVpR41Q==",
   "success": true,
-  "projectFilePath": "d:\\Repository\\CursoASPCORE_FullStack\\ProAgilWebApi\\ProAgilWebApi.csproj",
+  "projectFilePath": "D:\\Repository\\CursoASPCORE_FullStack\\ProAgilWebApi\\ProAgilWebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\amore\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\amore\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\5.0.4\\microsoft.aspnetcore.diagnostics.entityframeworkcore.5.0.4.nupkg.sha512",

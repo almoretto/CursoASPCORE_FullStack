@@ -14,14 +14,21 @@ export class EventsComponent implements OnInit
   constructor(private http: HttpClient) { }
 
   events: any = []; /* this line declares a variable and atributes a null value of Array to it using the [] */
-  _filterType: string;
 
-  get filterType(): string
-    { return this._filterType; }
+  // tslint:disable-next-line:variable-name
+  // tslint:disable-next-line:variable-name
+  _filterList = '';
 
-  set filterType(value: string)
-    { this._filterType = value; }
+  get filterList(): string
+    { return this._filterList; }
 
+  set filterList(value: string)
+    {
+      this._filterList = value;
+      this.filteredEvents = this._filterList ? this.EventFilter(this.filterList) : this.events;
+    }
+
+  filteredEvents: any = [];
   /*properties for using on URL*/
   imgWidth = 70;
   imgMargin = 2;
@@ -36,7 +43,13 @@ export class EventsComponent implements OnInit
   ImgAlternate(): void {
     this.showImg = !this.showImg;
   }
-
+  EventFilter(filterBy: string): any
+  {
+    filterBy = filterBy.toLocaleLowerCase();
+    return this.events.filter((events: { subject: { toLocaleLowerCase: () => number; }; }) => events.subject.toLocaleLowerCase() !== - 1);
+    // this.events.filter(events => events.subject.toLocaleLowerCase() !== - 1);
+    /* !== =  ! = = all together */
+  }
   GetEvents(): any
   {
     // tslint:disable-next-line: deprecation
