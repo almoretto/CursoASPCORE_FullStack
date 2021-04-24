@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Event } from '@angular/router';
 
 @Component({
   // tslint:disable-next-line: component-selector
@@ -13,7 +14,7 @@ export class EventsComponent implements OnInit
 
   constructor(private http: HttpClient) { }
 
-  events: any = []; /* this line declares a variable and atributes a null value of Array to it using the [] */
+  events: any = [] ; /* this line declares a variable and atributes a null value of Array to it using the [] */
 
   // tslint:disable-next-line:variable-name
   // tslint:disable-next-line:variable-name
@@ -43,10 +44,10 @@ export class EventsComponent implements OnInit
   ImgAlternate(): void {
     this.showImg = !this.showImg;
   }
-  EventFilter(filterBy: string): any
+  EventFilter(filterBy: string): Event
   {
     filterBy = filterBy.toLocaleLowerCase();
-    return this.events.filter((events: { subject: { toLocaleLowerCase: () => number; }; }) => events.subject.toLocaleLowerCase() !== - 1);
+    return this.events.filter((events: { subject: string; }) => events.subject.toLocaleLowerCase().indexOf(filterBy) !== - 1);
     // this.events.filter(events => events.subject.toLocaleLowerCase() !== - 1);
     /* !== =  ! = = all together */
   }

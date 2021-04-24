@@ -76,3 +76,7 @@ D:\Repository\CursoASPCORE_FullStack\ProAgilWebApi\obj\Debug\net5.0\ref\ProAgilW
 D:\Repository\CursoASPCORE_FullStack\ProAgilWebApi\obj\Debug\net5.0\ProAgilWebApi.pdb
 D:\Repository\CursoASPCORE_FullStack\ProAgilWebApi\obj\Debug\net5.0\ProAgilWebApi.genruntimeconfig.cache
 D:\Repository\CursoASPCORE_FullStack\proagilwebapi\obj\Debug\net5.0\ProAgilWebApi.csprojAssemblyReference.cache
+D:\Repository\CursoASPCORE_FullStack\ProAgilWebApi\bin\Debug\net5.0\ProAgil.Domain.dll
+D:\Repository\CursoASPCORE_FullStack\ProAgilWebApi\bin\Debug\net5.0\ProAgil.Domain.pdb
+D:\Repository\CursoASPCORE_FullStack\ProAgilWebApi\bin\Debug\net5.0\ProAgil.Repository.dll
+D:\Repository\CursoASPCORE_FullStack\ProAgilWebApi\bin\Debug\net5.0\ProAgil.Repository.pdb

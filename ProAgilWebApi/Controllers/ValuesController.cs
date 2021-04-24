@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ProAgilWebApi.Data;
+using ProAgil.Repository.Context;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,8 +12,8 @@ namespace ProAgilWebApi.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        private readonly ProAgilApiContext _context;
-        public ValuesController(ProAgilApiContext context)
+        private readonly ProAgilContext _context;
+        public ValuesController(ProAgilContext context)
         {
             _context = context;
         }
@@ -31,7 +31,7 @@ namespace ProAgilWebApi.Controllers
             {
                 return this.StatusCode(StatusCodes.Status500InternalServerError, "Database Error");
             }
-           
+
         }
 
         // GET api/values/?id
@@ -41,16 +41,16 @@ namespace ProAgilWebApi.Controllers
             try
             {
                 var result = await _context.Events
-                .Where(x => x.IdEvent == id)
+                .Where(x => x.Id == id)
                 .FirstOrDefaultAsync();
                 return Ok(result);
             }
             catch (Exception)
             {
-                return this.StatusCode(StatusCodes.Status500InternalServerError,"Database Error");
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Database Error");
             }
 
-            
+
         }
 
         //// POST api/values

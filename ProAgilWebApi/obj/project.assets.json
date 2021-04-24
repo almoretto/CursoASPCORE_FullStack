@@ -5,7 +5,7 @@
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/_._": {}
+          "lib/netstandard2.0/Humanizer.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {}
@@ -1703,6 +1703,34 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "ProAgil.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/ProAgil.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProAgil.Domain.dll": {}
+        }
+      },
+      "ProAgil.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.4",
+          "Microsoft.EntityFrameworkCore.Design": "5.0.4",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.4",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.4",
+          "Microsoft.EntityFrameworkCore.Tools": "5.0.4",
+          "ProAgil.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ProAgil.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProAgil.Repository.dll": {}
         }
       }
     }
@@ -6168,6 +6196,16 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "ProAgil.Domain/1.0.0": {
+      "type": "project",
+      "path": "../ProAgil.Domain/ProAgil.Domain.csproj",
+      "msbuildProject": "../ProAgil.Domain/ProAgil.Domain.csproj"
+    },
+    "ProAgil.Repository/1.0.0": {
+      "type": "project",
+      "path": "../ProAgil.Repository/ProAgil.Repository.csproj",
+      "msbuildProject": "../ProAgil.Repository/ProAgil.Repository.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6180,7 +6218,9 @@
       "Microsoft.EntityFrameworkCore.Relational >= 5.0.4",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.4",
       "Microsoft.EntityFrameworkCore.Sqlite >= 5.0.4",
-      "Microsoft.EntityFrameworkCore.Tools >= 5.0.4"
+      "Microsoft.EntityFrameworkCore.Tools >= 5.0.4",
+      "ProAgil.Domain >= 1.0.0",
+      "ProAgil.Repository >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -6217,7 +6257,14 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Repository\\CursoASPCORE_FullStack\\ProAgil.Domain\\ProAgil.Domain.csproj": {
+              "projectPath": "D:\\Repository\\CursoASPCORE_FullStack\\ProAgil.Domain\\ProAgil.Domain.csproj"
+            },
+            "D:\\Repository\\CursoASPCORE_FullStack\\ProAgil.Repository\\ProAgil.Repository.csproj": {
+              "projectPath": "D:\\Repository\\CursoASPCORE_FullStack\\ProAgil.Repository\\ProAgil.Repository.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -6289,7 +6336,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
