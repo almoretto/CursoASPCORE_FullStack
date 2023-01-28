@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace ProAgil.Domain.Models
+namespace ProAgil.Domain.DataModels
 {
     public class SpeakerEvent
     {
@@ -11,8 +11,8 @@ namespace ProAgil.Domain.Models
 
 
         #region EF Relations
-        public Speaker Speaker { get; set; }
-        public Event Event { get; set; }
+        public Speaker Speaker { get; }
+        public Event Event { get; }
 
         #endregion
 

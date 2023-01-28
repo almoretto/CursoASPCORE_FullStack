@@ -19,7 +19,7 @@
     },
     "ProAgilWebApi": {
       "commandName": "Project",
-      "dotnetRunMessages": "true",
+      "dotnetRunMessages": true,
       "launchBrowser": false,
       "launchUrl": "api/values",
       "applicationUrl": "http://localhost:8080",

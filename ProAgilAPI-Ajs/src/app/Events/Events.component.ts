@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Event } from '@angular/router';
+import { EventService } from '../services/Event.service'; // Injection Dependency for the service layer
 
 @Component({
   // tslint:disable-next-line: component-selector
@@ -12,11 +12,11 @@ import { Event } from '@angular/router';
 export class EventsComponent implements OnInit
 {
 
-  constructor(private http: HttpClient) { }
+  constructor(private eventService: EventService) { } // Constructor with dependency injection from the service layer
 
-  events: any = [] ; /* this line declares a variable and atributes a null value of Array to it using the [] */
-
-  // tslint:disable-next-line:variable-name
+  eventsView: Event[]; /* this line declares a variable and atributes a null value of Array
+                      * to it using the [] */
+  filteredEvents: Event[];
   // tslint:disable-next-line:variable-name
   _filterList = '';
 
@@ -26,10 +26,9 @@ export class EventsComponent implements OnInit
   set filterList(value: string)
     {
       this._filterList = value;
-      this.filteredEvents = this._filterList ? this.EventFilter(this.filterList) : this.events;
+      this.filteredEvents = this._filterList ? this.EventFilter(this.filterList) : this.eventsView;
     }
 
-  filteredEvents: any = [];
   /*properties for using on URL*/
   imgWidth = 70;
   imgMargin = 2;
@@ -44,19 +43,21 @@ export class EventsComponent implements OnInit
   ImgAlternate(): void {
     this.showImg = !this.showImg;
   }
-  EventFilter(filterBy: string): Event
+  EventFilter(filterBy: string): Event[]
   {
     filterBy = filterBy.toLocaleLowerCase();
-    return this.events.filter((events: { subject: string; }) => events.subject.toLocaleLowerCase().indexOf(filterBy) !== - 1);
+    return this.eventsView.filter((events: { subject: string; }) => events.subject.toLocaleLowerCase().indexOf(filterBy) !== - 1);
     // this.events.filter(events => events.subject.toLocaleLowerCase() !== - 1);
     /* !== =  ! = = all together */
   }
-  GetEvents(): any
+  GetEvents(): Event[]
   {
     // tslint:disable-next-line: deprecation
-    this.http.get('http://localhost:8080/api/values').subscribe(response =>
+    this.eventService.getEvents().subscribe((events: Event[]) =>
       {
-        this.events = response;
+        this.eventsView = events;
+        this.EventFilter = this.eventsView;
+        console.log(events);
       }, error =>
       {
         console.log(error);

@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ProAgil.Domain.Models;
+using ProAgil.Domain.DataModels;
 
 namespace ProAgil.Repository.Context
 {

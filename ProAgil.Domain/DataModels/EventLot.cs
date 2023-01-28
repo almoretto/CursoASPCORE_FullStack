@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System;
 
-namespace ProAgil.Domain.Models
+namespace ProAgil.Domain.DataModels
 {
     public class EventLot
     {
@@ -15,7 +15,7 @@ namespace ProAgil.Domain.Models
         public int EventId { get; set; }
 
         #region EF Relations
-        public Event Event { get; set; }
+        public Event Event { get; }
 
         #endregion
 

@@ -3,7 +3,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
 
-namespace ProAgil.Domain.Models
+namespace ProAgil.Domain.DataModels
 {
     public class Event
     {

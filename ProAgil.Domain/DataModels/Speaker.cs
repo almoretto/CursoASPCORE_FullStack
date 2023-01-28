@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace ProAgil.Domain.Models
+namespace ProAgil.Domain.DataModels
 {
     public class Speaker
     {

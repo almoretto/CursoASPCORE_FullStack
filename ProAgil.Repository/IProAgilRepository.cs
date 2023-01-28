@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using ProAgil.Domain.Models;
+using ProAgil.Domain.DataModels;
 
 namespace ProAgil.Repository
 {
@@ -17,6 +17,7 @@ namespace ProAgil.Repository
         Task<List<Event>> GetEventsBySubjectAsync(string subject, bool includeSpeaker);
         Task<List<Event>> GetEventsAsync(bool includeSpeaker);
         Task<Event> GetEventByIdAsync(int eventId, bool includeSpeaker);
+        Task<List<Event>> GetEventsBySpeakerAsync(string Speaker);
         #endregion
 
         #region --==Speaker Queries==--
